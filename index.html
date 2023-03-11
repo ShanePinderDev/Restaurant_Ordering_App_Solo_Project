@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="diner-name">Jimmy's Dinner</h1>
+      <p class="diner-description">The best burgers and pizzas in town.</p>
+    </header>
+    <main>
+      <div class="container-menu-items" id="container-menu-items"></div>
+      <div class="container-thanks" id="container-thanks">
+        <p class="thanks-text">Thanks, James! Your order is on its way!</p>
+      </div>
+      <div class="container-order" id="container-order">
+        <h2 class="order-heading">Your order</h2>
+        <div class="container-products" id="container-products"></div>
+        <div class="container-price" id="container-price"></div>
+      </div>
+    </main>
+    <div class="credit-card-modal" id="credit-card-modal">
+      <div class="credit-card-modal-inner" id="credit-card-modal-inner">
+        <h3 class="form-heading">Enter card details</h3>
+        <form
+          action=""
+          method="get"
+          class="credit-card-form"
+          id="credit-card-form"
+        >
+          <div class="credit-card-form">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="credit-card-form">
+            <input
+              type="text"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="19"
+              inputmode="numeric"
+              name="credit-card-number"
+              id="credit-card-number"
+              placeholder="Enter card number"
+              required
+            />
+          </div>
+          <div class="credit-card-form">
+            <input
+              type="text"
+              pattern="[0-9]*"
+              maxlength="3"
+              inputmode="numeric"
+              name="cvv"
+              id="cvv"
+              placeholder="Enter CVV"
+              required
+            />
+          </div>
+          <div class="credit-card-form">
+            <input
+              type="submit"
+              value="Pay"
+              class="credit-card-btn"
+              id="credit-card-btn"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
